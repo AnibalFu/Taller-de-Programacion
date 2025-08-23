@@ -109,7 +109,7 @@ Para levantarlos, ejecutar:
 make run_docker_microservices
 ```
 
-Aclaracion, antes de realizar levantar los microservicios, asegurarse de que la API_KEY de Gemini este seteada en `25C1-MutoTodo-rs/microservice_llm.sh`.
+Aclaracion, antes de realizar levantar los microservicios, asegurarse de que la `API_KEY` de Gemini este seteada en `/microservice_llm.sh`.
 
 ### 4. Ejecutar la interfaz gráfica
 
