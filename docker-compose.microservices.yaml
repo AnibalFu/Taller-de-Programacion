@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  documents_handler:
+    image: rusty_docs:latest
+    command: ["./target/release/documents-handler-service", "redis_address=host.docker.internal:8088", "save_timer=30000"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - redis_network
+
+  llm_service:
+    image: rusty_docs:latest
+    environment:
+      - API_KEY=${API_KEY}
+    command: ["./target/release/microservice_llm", "host=host.docker.internal", "port=8088", "api_key=${API_KEY}"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - redis_network
+
+networks:
+  redis_network:

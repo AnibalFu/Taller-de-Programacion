@@ -1,0 +1,12 @@
+[package]
+name = "microservice_llm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+common = { path = "../common", version = "0.1.0"}
+logger = { path = "../logger", version = "0.1.0"}
+redis_client = {path = "../redis_client", version = "0.1.0"}
+json = {path = "../json", version = "0.1.0"}
+
+reqwest = { version = "0.12", features = ["blocking", "json", "rustls-tls"] }

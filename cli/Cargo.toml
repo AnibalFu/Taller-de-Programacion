@@ -1,0 +1,12 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+redis_node = {path = "../redis_node", version = "0.1.0"}
+redis_client = {path = "../redis_client", version = "0.1.0"}
+
+[[bin]]
+name = "cliente"
+path = "src/main.rs"

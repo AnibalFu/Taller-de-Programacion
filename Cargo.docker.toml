@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+    "logger",
+    "redis_client",
+    "redis_node",
+    "common",
+    "documents-handler-service",
+    "microservice_llm",
+    "json",
+    "interpretefth",
+    "events"
+]

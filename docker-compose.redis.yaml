@@ -1,0 +1,22 @@
+services:
+  redis_node:
+    image: rusty_docs:latest
+    container_name: redis_node_0${NODE_ID:-1}
+    environment:
+      - NODE_ID=${NODE_ID:-1}
+      - API_KEY=${API_KEY:-default_api_key}
+    volumes:
+      - ./distributed_configs/redis_0${NODE_ID:-1}.conf:/config/node.conf
+      - ./distributed_configs/users.txt:/config/users.txt
+      - ./distributed_configs/data:/config/data
+    ports:
+      - "${NODE_PORT:-8088}:${NODE_PORT:-8088}"
+      - "${CLUSTER_PORT:-18088}:${CLUSTER_PORT:-18088}"
+    command: ["./target/release/redis_node", "/config/node.conf"]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - redis_network
+
+networks:
+  redis_network:

@@ -1,0 +1,17 @@
+[package]
+name = "ui_client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+events = { path = "../events" }
+common = { path = "../common" }
+redis_client = {path = "../redis_client"}
+interpretefth = {path = "../interpretefth"}
+json = {path = "../json"}
+eframe = "0.31.1"
+egui = "0.31.1"
+egui_extras = "0.31.1"
+egui_commonmark = { version = "0.20", features = ["fetch", "embedded_image", "better_syntax_highlighting"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif"] }
+rfd             = "0.15"

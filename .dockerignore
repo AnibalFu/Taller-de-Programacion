@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Target build dir (will be rebuilt in Docker)
+target
+
+# Build artifacts
+**/*.rs.bk
+**/*.rlib
+
+# Dependency cache
+Cargo.lock
+
+# Configs and local dev
+.env
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ui_client/
+tests/
+cli/
