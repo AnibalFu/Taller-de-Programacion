@@ -135,7 +135,7 @@ make kill_docker_cluster
 
 ### Integrantes
 
-- Aníbal Fu — 111206  
+- Anibal Fu — 111206  
 - Camila Figueroa — 111204  
 - Giuliana Pazos — 111268  
 - Tomás Villegas — 106456
